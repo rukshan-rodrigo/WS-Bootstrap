@@ -1,0 +1,55 @@
+@import "bourbon";
+
+@import "variables";
+@import "bootstrap";
+@import "mixins";
+
+// Google Webfont
+//@import url(http://fonts.googleapis.com/css?family=Lato:300,400);
+
+// FontAwesome
+//@import url(http://netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.css);
+
+@font-face {
+	font-family: 'webscope';
+	src: url('../fonts/webscope.eot');
+	src: url('../fonts/webscope.eot?#iefix') format('embedded-opentype'),
+	     url('../fonts/webscope.woff') format('woff'),
+	     url('../fonts/webscope.ttf') format('truetype'),
+	     url('../fonts/webscope.svg#webscope') format('svg');
+}
+
+@import "components/components";
+
+
+// Base Elements
+
+img{
+  max-width: 100%;
+  height: auto;
+}
+
+body{
+}
+
+.icon-webscope-tag{
+  font-family: 'webscope';
+  color: #ccc;
+  font-size: 20px;
+  float: right;
+  speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	&:before{
+  	content: "\e600";
+	}
+	&:hover{
+  	color: #e61873;
+  	text-decoration: none;
+	}
+}
