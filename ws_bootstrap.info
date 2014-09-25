@@ -39,25 +39,25 @@ stylesheets[all][] = stylesheets/style.css
 ; ;; Scripts
 ; ;;;;;;;;;;;;;;;;;;;;;
 
-scripts[] = 'javascripts/bootstrap/affix.js'
-scripts[] = 'javascripts/bootstrap/alert.js'
-scripts[] = 'javascripts/bootstrap/button.js'
-scripts[] = 'javascripts/bootstrap/carousel.js'
-scripts[] = 'javascripts/bootstrap/collapse.js'
-scripts[] = 'javascripts/bootstrap/dropdown.js'
-scripts[] = 'javascripts/bootstrap/modal.js'
-scripts[] = 'javascripts/bootstrap/tooltip.js'
-scripts[] = 'javascripts/bootstrap/popover.js'
-scripts[] = 'javascripts/bootstrap/scrollspy.js'
-scripts[] = 'javascripts/bootstrap/tab.js'
-scripts[] = 'javascripts/bootstrap/transition.js'
+;scripts[] = 'javascripts/bootstrap/affix.js'
+;scripts[] = 'javascripts/bootstrap/button.js'
+;scripts[] = 'javascripts/bootstrap/collapse.js'
+;scripts[] = 'javascripts/bootstrap/dropdown.js'
+;scripts[] = 'javascripts/bootstrap/modal.js'
+;scripts[] = 'javascripts/bootstrap/tooltip.js'
+;scripts[] = 'javascripts/bootstrap/popover.js'
+;scripts[] = 'javascripts/bootstrap/scrollspy.js'
+;scripts[] = 'javascripts/bootstrap/tab.js'
+;scripts[] = 'javascripts/bootstrap/transition.js'
 ;
 ; ; Disable BootstrapCDN if using Bootstrap source files in your sub-theme.
 settings[bootstrap_cdn] = ''
 
-scripts[] = 'javascripts/bootstrap-select.min.js'
-scripts[] = 'javascripts/bootstrap-validator.min.js'
-scripts[] = 'javascripts/script.js'
+;scripts[] = 'javascripts/bootstrap-select.min.js'
+;scripts[] = 'javascripts/bootstrap-validator.min.js'
+;scripts[] = 'javascripts/script.js'
+
+scripts[] = 'javascripts/WSBootstrap.min.js'
 
 ; ;-------------------------
 ; ; METHOD 2: Bootstrap CDN
