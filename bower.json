@@ -1,0 +1,14 @@
+{
+  "name": "WS Bootstrap",
+  "version": "1.0.0",
+  "dependencies": {
+    "bootstrap-sass-official": "latest",
+    "bootstrap-select": "latest",
+    "bootstrapValidator": "latest"
+  },
+  "dependenciesIgnore": {
+    "jquery": ["*"],
+    "bootstrap": ["*"]
+  },
+  "private": true
+}

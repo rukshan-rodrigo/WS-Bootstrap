@@ -32,7 +32,12 @@ module.exports = function(grunt) {
         separator: ';'
       },
       dist: {
-        src: ['javascripts/**/*.js'],
+        src: [
+          'external/bootstrap-sass-official/assets/javascripts/bootstrap/*.js', 
+          'external/bootstrap-select/dist/js/bootstrap-select.js', 
+          'external/bootstrapValidator/dist/js/bootstrapValidator,js',
+          'javascripts/**/*.js', 
+        ],
         dest: 'javascripts/<%= pkg.name %>.js'
       }
     },
@@ -55,4 +60,5 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-concat');
+  grunt.loadNpmTasks('grunt-bower-clean');
 };
