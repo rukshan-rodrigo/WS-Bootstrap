@@ -7,10 +7,14 @@ A Drupal Subtheme of Bootstrap Theme with Sass
 Getting Started
 ===============
 
-`npm install`
+`npm install` 
 
-`grunt` to compile scss and watch
+`bower install` to install external libraries
 
-`grunt build` to compile js
+`grunt bower_clean` to remove unneeded libraries
+
+`grunt` to compile scss and watch with livereload
+
+`grunt deploy` to concat & uglify js
 
 
