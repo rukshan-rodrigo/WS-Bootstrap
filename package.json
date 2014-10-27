@@ -9,5 +9,8 @@
     "node-bourbon": "~1.2.3",
     "grunt-contrib-concat": "~0.5.0",
     "grunt-bower-clean": "~0.2.1"
+  },
+  "scripts": {
+    "postinstall": "find node_modules/ -name \"*.info\" -type f -delete"
   }
 }
