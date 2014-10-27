@@ -18,6 +18,9 @@
   @else if $canvas == S{
      @media only screen and (min-width: $S) { @content; }
   }
+  @else if $canvas == Sneg{
+    @media only screen and (max-width: $S - 1) { @content; }
+  }
   @else if $canvas == M{
      @media only screen and (min-width: $M) { @content; }
   }
