@@ -44,8 +44,35 @@
   }
 }
 
+// Image replacement
 @mixin ir{
   text-indent: 100%;
   white-space: nowrap;
   overflow: hidden;
+}
+
+
+// Grid - 2 cols for small, 3 cols for medium, 4 cols for large 
+@mixin grid {
+  @include make-row();
+  > div {
+    @include make-sm-column(6);
+    @include make-md-column(4);
+    @include make-lg-column(3);
+    @include MQ(S-M) {
+      &:nth-child(2n+1){
+        clear: left;
+      }
+    }
+    @include MQ(M-L) {
+      &:nth-child(3n+1){
+        clear: left;
+      }
+    }
+    @include MQ(L) {
+      &:nth-child(4n+1) {
+        clear: left;
+      }
+    }
+  }
 }
