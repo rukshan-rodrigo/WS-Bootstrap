@@ -30,6 +30,15 @@
   @else if $canvas == XL{
      @media only screen and (min-width: $XL) { @content; }
   }
+  @else if $canvas == S-M{
+     @media only screen and (min-width: $S) and (max-width: $M - 1) { @content; }
+  }
+  @else if $canvas == M-L{
+     @media only screen and (min-width: $M) and (max-width: $L - 1) { @content; }
+  }
+  @else if $canvas == L-XL{
+     @media only screen and (min-width: $L) and (max-width: $XL - 1) { @content; }
+  }
 }
 
 // Retina Background Images - Width & height need to be half the size of the 2x image
