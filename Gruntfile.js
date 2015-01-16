@@ -2,9 +2,6 @@ module.exports = function(grunt) {
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
 		watch: {
-      // options: {
-      //   livereload: true
-      // },
 			sass: {
 				files: ['sass/**/*.{scss,sass}','sass/_partials/**/*.{scss,sass}'],
 				tasks: ['sass:dist'],
@@ -12,6 +9,10 @@ module.exports = function(grunt) {
           livereload: true
         }
 			},
+      js: {
+        files: ['javascripts/script.js'],
+        tasks: ['deploy']
+      }
 		},
 		sass: {
 			options: {
