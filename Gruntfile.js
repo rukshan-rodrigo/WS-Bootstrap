@@ -2,16 +2,29 @@ module.exports = function(grunt) {
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
 		watch: {
+      globbing: {
+        files: ['sass/components/**/*'],
+        tasks: ['sass_globbing:target'],
+        options: {
+          livereload: true,
+          spawn: false
+        }
+      },
 			sass: {
-				files: ['sass/**/*.{scss,sass}','sass/_partials/**/*.{scss,sass}'],
+				files: ['sass/**/*.{scss,sass}'],
 				tasks: ['sass:dist'],
         options: {
-          livereload: true
+          livereload: true,
+          spawn: false
         }
 			},
       js: {
         files: ['javascripts/script.js'],
-        tasks: ['deploy']
+        tasks: ['deploy'],
+        options: {
+          livereload: true,
+          spawn: false
+        }
       }
 		},
 		sass: {
@@ -34,21 +47,9 @@ module.exports = function(grunt) {
       },
       dist: {
         src: [
-          'external/bootstrap-sass-official/assets/javascripts/bootstrap/affix.js', 
-          'external/bootstrap-sass-official/assets/javascripts/bootstrap/alert.js', 
-          'external/bootstrap-sass-official/assets/javascripts/bootstrap/button.js', 
-          'external/bootstrap-sass-official/assets/javascripts/bootstrap/carousel.js', 
-          'external/bootstrap-sass-official/assets/javascripts/bootstrap/collapse.js', 
-          'external/bootstrap-sass-official/assets/javascripts/bootstrap/dropdown.js', 
-          'external/bootstrap-sass-official/assets/javascripts/bootstrap/modal.js', 
-          'external/bootstrap-sass-official/assets/javascripts/bootstrap/tooltip.js', 
-          'external/bootstrap-sass-official/assets/javascripts/bootstrap/popover.js', 
-          'external/bootstrap-sass-official/assets/javascripts/bootstrap/scrollspy.js', 
-          'external/bootstrap-sass-official/assets/javascripts/bootstrap/tab.js', 
-          'external/bootstrap-sass-official/assets/javascripts/bootstrap/transition.js', 
-          'external/bootstrap-select/dist/js/bootstrap-select.js', 
-          'external/bootstrapValidator/dist/js/bootstrapValidator,js',
-          'javascripts/**/*.js', 
+          'external/bootstrap-sass-official/assets/javascripts/bootstrap.js',
+          'external/bootstrap-select/dist/js/bootstrap-select.js',
+          'javascripts/script.js',
         ],
         dest: 'javascripts/<%= pkg.name %>.js'
       }
@@ -64,6 +65,16 @@ module.exports = function(grunt) {
           'javascripts/<%= pkg.name %>.min.js': ['<%= concat.dist.dest %>']
         }
       }
+    },
+    sass_globbing: {
+      target: {
+        files: {
+          'sass/_components.scss': 'sass/components/**/*.scss'
+        },
+        options: {
+          useSingleQuoates: false
+        }
+      }
     }
 	});
 	grunt.registerTask('default', ['sass:dist', 'watch']);
@@ -73,4 +84,5 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-bower-clean');
+  grunt.loadNpmTasks('grunt-sass-globbing');
 };

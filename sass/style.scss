@@ -4,6 +4,8 @@
 @import "external/bootstrap-sass-official/assets/stylesheets/bootstrap";
 @import "mixins";
 
+@import "components";
+
 // Google Webfont
 //@import url(http://fonts.googleapis.com/css?family=Lato:300,400);
 
@@ -18,8 +20,6 @@
 	     url('../fonts/webscope.ttf') format('truetype'),
 	     url('../fonts/webscope.svg#webscope') format('svg');
 }
-
-@import "components/components";
 
 
 // Base Elements
