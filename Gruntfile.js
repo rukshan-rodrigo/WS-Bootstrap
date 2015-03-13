@@ -11,8 +11,8 @@ module.exports = function(grunt) {
         }
       },
 			sass: {
-				files: ['sass/**/*.{scss,sass}'],
-				tasks: ['sass:dist'],
+				files: ['sass/**/*.scss'],
+				tasks: ['sass:dist', 'autoprefixer'],
         options: {
           livereload: true,
           spawn: false
@@ -33,9 +33,6 @@ module.exports = function(grunt) {
 				outputStyle: 'compressed'
 			},
 			dist: {
-			  options: {
-          includePaths: require('node-bourbon').includePaths
-        },
 				files: {
 					'stylesheets/style.css': 'sass/style.scss'
 				}
@@ -75,6 +72,12 @@ module.exports = function(grunt) {
           useSingleQuoates: false
         }
       }
+    },
+    autoprefixer: {
+      options: {
+        browsers: ['last 2 versions']
+      },
+      dist: { src: 'stylesheets/*.css' }
     }
 	});
 	grunt.registerTask('default', ['sass:dist', 'watch']);
@@ -85,4 +88,5 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-bower-clean');
   grunt.loadNpmTasks('grunt-sass-globbing');
+  grunt.loadNpmTasks('grunt-autoprefixer');
 };
