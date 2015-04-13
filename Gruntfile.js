@@ -29,7 +29,8 @@ module.exports = function(grunt) {
 		},
 		sass: {
 			options: {
-				sourceComments: 'map',
+				sourceMap: true,
+        outfile: 'stylesheets/style.css',
 				outputStyle: 'compressed'
 			},
 			dist: {
