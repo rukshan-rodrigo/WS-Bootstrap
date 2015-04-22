@@ -2,7 +2,8 @@
 @import "external/bootstrap-sass-official/assets/stylesheets/bootstrap";
 @import "mixins";
 
-@import "components";
+// Uncomment this after running grunt & compiling sass once. It will create the components file
+//@import "components";
 
 // Google Webfont
 //@import url(http://fonts.googleapis.com/css?family=Lato:300,400);
