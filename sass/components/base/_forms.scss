@@ -1,0 +1,15 @@
+// Login Page
+
+.page-user.not-logged-in {
+  .main-container section {
+    max-width: 500px;
+    margin: 0 auto;
+    float: none;
+    @include MQ(S) {
+      padding-bottom: 60px;
+    }
+    .page-header {
+      text-align: center;
+    }
+  }
+}
