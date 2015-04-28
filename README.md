@@ -6,9 +6,9 @@ A Drupal Subtheme of Bootstrap Theme which uses Sass Bootstrap & Libsass. Sass i
 
 ## Getting Started
 
-`npm install`
+Run `npm install` in the theme root folder
 
-'grunt init` to get setup, and then
+`grunt init` to get setup, and then
 
 `grunt` to compile scss & js, and watch with [livereload](https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei?hl=en).
 
