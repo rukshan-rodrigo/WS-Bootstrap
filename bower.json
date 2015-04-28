@@ -4,11 +4,7 @@
   "dependencies": {
     "bootstrap-sass-official": "latest",
     "bootstrap-select": "latest",
-    "bootstrapValidator": "latest"
-  },
-  "dependenciesIgnore": {
-    "jquery": ["*"],
-    "bootstrap": ["*"]
+    "fontawesome": "latest"
   },
   "private": true
 }

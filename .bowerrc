@@ -1,3 +1,6 @@
 {
-  "directory" : "external"
+  "directory" : "external",
+  "scripts": {
+    "postinstall": "rm -rf external/jquery"
+  }
 }

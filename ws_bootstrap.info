@@ -24,6 +24,7 @@ regions[page_bottom]    = 'Page bottom'
 ;; Stylesheets
 ;;;;;;;;;;;;;;;;;;;;;
 
+stylesheets[all][] = stylesheets/bower.css
 stylesheets[all][] = stylesheets/style.css
 
 
@@ -34,7 +35,7 @@ stylesheets[all][] = stylesheets/style.css
 ; ;----------------------------------
 ; ; METHOD 1: Bootstrap Source Files
 ; ;----------------------------------
-; 
+;
 ; ;;;;;;;;;;;;;;;;;;;;;
 ; ;; Scripts
 ; ;;;;;;;;;;;;;;;;;;;;;
@@ -53,11 +54,7 @@ stylesheets[all][] = stylesheets/style.css
 ; ; Disable BootstrapCDN if using Bootstrap source files in your sub-theme.
 settings[bootstrap_cdn] = ''
 
-;scripts[] = 'javascripts/bootstrap-select.min.js'
-;scripts[] = 'javascripts/bootstrap-validator.min.js'
-;scripts[] = 'javascripts/script.js'
-
-scripts[] = 'javascripts/ws_bootstrap.min.js'
+scripts[] = 'javascripts/scripts.min.js'
 
 ; ;-------------------------
 ; ; METHOD 2: Bootstrap CDN

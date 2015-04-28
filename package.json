@@ -4,15 +4,15 @@
   "private": true,
   "devDependencies": {
     "grunt": "*",
+    "grunt-autoprefixer": "*",
+    "grunt-contrib-concat": "*",
+    "grunt-contrib-copy": "*",
+    "grunt-contrib-uglify": "*",
     "grunt-contrib-watch": "*",
     "grunt-sass": "*",
-    "grunt-contrib-uglify": "*",
-    "grunt-contrib-concat": "*",
-    "grunt-bower-clean": "*",
-    "grunt-sass-globbing": "*",
-    "grunt-autoprefixer": "*"
+    "grunt-sass-globbing": "*"
   },
   "scripts": {
-    "postinstall": "find node_modules/ -name \"*.info\" -type f -delete"
+    "postinstall": "node_modules/.bin/bower install"
   }
 }

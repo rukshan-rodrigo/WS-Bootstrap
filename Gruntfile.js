@@ -1,3 +1,13 @@
+var bower = {
+  scripts: [
+    'external/bootstrap-sass-official/assets/javascripts/bootstrap.js',
+    'external/bootstrap-select/dist/js/bootstrap-select.js'
+  ],
+  css: [
+    'external/bootstrap-select/dist/css/bootstrap-select.css'
+  ]
+}
+
 module.exports = function(grunt) {
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
@@ -20,7 +30,7 @@ module.exports = function(grunt) {
 			},
       js: {
         files: ['javascripts/script.js'],
-        tasks: ['deploy'],
+        tasks: ['compilejs'],
         options: {
           livereload: true,
           spawn: false
@@ -43,13 +53,18 @@ module.exports = function(grunt) {
       option: {
         separator: ';'
       },
-      dist: {
+      js: {
         src: [
-          'external/bootstrap-sass-official/assets/javascripts/bootstrap.js',
-          'external/bootstrap-select/dist/js/bootstrap-select.js',
+          bower.scripts,
           'javascripts/script.js',
         ],
         dest: 'javascripts/<%= pkg.name %>.js'
+      },
+      css: {
+        src: [
+          bower.css
+        ],
+        dest: 'stylesheets/bower.css'
       }
     },
 		uglify: {
@@ -57,10 +72,9 @@ module.exports = function(grunt) {
         options: {
           mangle: true,
           compress: true,
-          banner: '/*! <%= pkg.name %> <%= grunt.template.today("dd-mm-yyyy") %> */\n'
         },
         files: {
-          'javascripts/<%= pkg.name %>.min.js': ['<%= concat.dist.dest %>']
+          'javascripts/script.min.js': ['javascripts/ws_bootstrap.js']
         }
       }
     },
@@ -79,15 +93,25 @@ module.exports = function(grunt) {
         browsers: ['last 2 versions']
       },
       dist: { src: 'stylesheets/*.css' }
+    },
+    copy: {
+      fontawesome: {
+        expand: true,
+        dest: 'fonts/fontawesome',
+        cwd: 'external/fontawesome/fonts/',
+        src: '**'
+      }
     }
 	});
 	grunt.registerTask('default', ['sass:dist', 'watch']);
-	grunt.registerTask('deploy', ['concat:dist', 'uglify:dist']);
+  grunt.registerTask('init', ['copy:fontawesome', 'sass_globbing']);
+  grunt.registerTask('compile-js', ['concat:js', 'uglify:dist']);
+  grunt.registerTask('bower-compile', ['concat:css', 'concat:js', 'uglify:dist']);
 	grunt.loadNpmTasks('grunt-sass');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-concat');
-  grunt.loadNpmTasks('grunt-bower-clean');
   grunt.loadNpmTasks('grunt-sass-globbing');
   grunt.loadNpmTasks('grunt-autoprefixer');
+  grunt.loadNpmTasks('grunt-contrib-copy');
 };
