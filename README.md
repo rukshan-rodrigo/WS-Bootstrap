@@ -23,7 +23,7 @@ Finally run `grunt bower-compile`. This will add the js and css files to the pro
 
 ## Sass Globbing
 
-Any files or folders added in the components directory will be automatically inculded using Sass Globbing.
+Any files or folders added in the components directory will be automatically included using Sass Globbing.
 
 ## Javascript
 
@@ -44,7 +44,7 @@ Rows are a place for columns to go inside. Basically all they do is add a 15px n
 
 Columns always must be within a row.
 
-test
+
 
 
 
