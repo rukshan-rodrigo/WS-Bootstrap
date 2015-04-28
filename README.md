@@ -8,7 +8,7 @@ A Drupal Subtheme of Bootstrap Theme which uses Sass Bootstrap & Libsass. Sass i
 
 `npm install`
 
-'grunt init' to get setup, and then
+'grunt init` to get setup, and then
 
 `grunt` to compile scss & js, and watch with [livereload](https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei?hl=en).
 
@@ -34,7 +34,7 @@ After running `grunt` any changes made in scripts.js will be compiled into scrip
 ### Container
 
 This sets up a max-width which changes at various breakpoints.
-*Never put a container inside a container.*
+**Never put a container inside a container.**
 
 ### Row
 
