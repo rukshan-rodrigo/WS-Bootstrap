@@ -1,4 +1,4 @@
-ws_bootstrap
+WS Bootstrap
 ============
 
 A Drupal Subtheme of Bootstrap Theme which uses Sass Bootstrap & Libsass. Sass is compiled using Grunt.
@@ -29,20 +29,6 @@ Any files or folders added in the components directory will be automatically inc
 
 After running `grunt` any changes made in scripts.js will be compiled into scripts.min.js which is loaded into the project.
 
-## A quick word on Bootstrap Grids
-
-### Container
-
-This sets up a max-width which changes at various breakpoints.
-**Never put a container inside a container.**
-
-### Row
-
-Rows are a place for columns to go inside. Basically all they do is add a 15px negative margin on each side. This helps align columns properly. A row must always go inside a container.
-
-### Column
-
-Columns always must be within a row.
 
 
 
