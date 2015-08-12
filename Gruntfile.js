@@ -29,7 +29,7 @@ module.exports = function(grunt) {
         }
 			},
       js: {
-        files: ['javascripts/script.js'],
+        files: ['javascripts/scripts.js'],
         tasks: ['compile-js'],
         options: {
           livereload: true,
@@ -56,7 +56,7 @@ module.exports = function(grunt) {
       js: {
         src: [
           bower.scripts,
-          'javascripts/script.js',
+          'javascripts/scripts.js',
         ],
         dest: 'javascripts/<%= pkg.name %>.js'
       },
@@ -74,7 +74,7 @@ module.exports = function(grunt) {
           compress: true,
         },
         files: {
-          'javascripts/script.min.js': ['javascripts/ws_bootstrap.js']
+          'javascripts/scripts.min.js': ['javascripts/ws_bootstrap.js']
         }
       }
     },
