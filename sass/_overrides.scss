@@ -1,5 +1,5 @@
 // Bootstrap variables.
-//@import 'bootstrap/bootstrap/variables';
+@import '../external/bootstrap-sass-official/assets/stylesheets/bootstrap/_variables.scss';
 
 // Media query variables.
 $tablet: "(min-width: #{$screen-sm-min})";
@@ -68,7 +68,7 @@ body {
   }
   // Override box-shadow styles on all "admin" menus.
   #toolbar, #admin-menu, #admin-toolbar {
-    @include box-shadow(none);
+    box-shadow: none;
   }
   // Override #admin-menu style.
   #admin-menu {
@@ -532,7 +532,7 @@ a .glyphicon-spin {
   }
   > .tab-content {
     border-radius: 0 $border-radius-base $border-radius-base $border-radius-base;
-    @include box-shadow(0 1px 1px rgba(0,0,0,.05));
+    box-shadow: 0 1px 1px rgba(0,0,0,.05);
     border: 1px solid $nav-tabs-border-color;
     overflow: hidden;
     padding: 10px 15px;
@@ -555,7 +555,7 @@ a .glyphicon-spin {
     > .active > a:hover,
     > .active > a:focus {
       border-color: $nav-tabs-border-color transparent $nav-tabs-border-color $nav-tabs-border-color;
-      @include box-shadow(-1px 1px 1px rgba(0,0,0,.05));
+        box-shadow: -1px 1px 1px rgba(0,0,0,.05);
     }
   }
 }
@@ -570,7 +570,7 @@ a .glyphicon-spin {
       &:hover,
       &:focus {
         border-color: $nav-tabs-link-hover-border-color $nav-tabs-link-hover-border-color $nav-tabs-link-hover-border-color $nav-tabs-border-color;
-        @include box-shadow(1px 1px 1px rgba(0,0,0,.05));
+        box-shadow: 1px 1px 1px rgba(0,0,0,.05);
       }
     }
     > .active > a,
