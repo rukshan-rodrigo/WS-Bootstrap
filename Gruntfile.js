@@ -30,7 +30,7 @@ module.exports = function(grunt) {
 			},
       js: {
         files: ['javascripts/script.js'],
-        tasks: ['compilejs'],
+        tasks: ['compile-js'],
         options: {
           livereload: true,
           spawn: false
